@@ -6,7 +6,7 @@ import { useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { toast } from "react-hot-toast"
-import { CloudFog, Trash } from "lucide-react"
+import { Trash } from "lucide-react"
 import { Billboard } from "@prisma/client"
 import { useParams, useRouter } from "next/navigation"
 
@@ -73,7 +73,7 @@ export const BillboardForm: React.FC<BillboardFormProps> = ({
       router.push(`/${params.storeId}/billboards`)
       toast.success(toastMessage)
     } catch (error: any) {
-      toast.error("you son of a bitch.")
+      toast.error("You son of bitch.")
     } finally {
       setLoading(false)
     }
