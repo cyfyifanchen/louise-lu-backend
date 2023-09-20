@@ -1,3 +1,3 @@
-# E-Commerence && Dashboard Admin
+# Dashboard
 
-Building a full-stack e-commerence with admin panel from scratch
+Building a full stack ecommerce from scratch.
