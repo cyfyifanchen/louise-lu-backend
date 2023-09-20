@@ -1,14 +1,14 @@
-"use client"
+'use client'
 
-import * as z from "zod"
-import { Store } from "@prisma/client"
-import { Heading } from "@/components/ui/heading"
-import { Button } from "@/components/ui/button"
-import { Trash } from "lucide-react"
-import { Separator } from "@/components/ui/separator"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useState } from "react"
+import * as z from 'zod'
+import { Store } from '@prisma/client'
+import { Heading } from '@/components/ui/heading'
+import { Button } from '@/components/ui/button'
+import { Trash } from 'lucide-react'
+import { Separator } from '@/components/ui/separator'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useState } from 'react'
 import {
   Form,
   FormControl,
@@ -16,20 +16,20 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import toast from "react-hot-toast"
-import axios from "axios"
-import { useParams, useRouter } from "next/navigation"
-import { AlertModal } from "@/components/modals/alert-modal"
-import { ApiAlert } from "@/components/ui/api-alert"
-import { useOrigin } from "@/hooks/use-origin"
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import toast from 'react-hot-toast'
+import axios from 'axios'
+import { useParams, useRouter } from 'next/navigation'
+import { AlertModal } from '@/components/modals/alert-modal'
+import { ApiAlert } from '@/components/ui/api-alert'
+import { useOrigin } from '@/hooks/use-origin'
 
 interface SettingsFormProps {
   initialData: Store
 }
 
-const formSchema = z.object({ name: z.string().min(3, "Too short") })
+const formSchema = z.object({ name: z.string().min(3, 'Too short') })
 
 type SettingsFormValues = z.infer<typeof formSchema>
 
@@ -51,9 +51,9 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
       setLoading(true)
       await axios.patch(`/api/stores/${params.storeId}`, data)
       router.refresh()
-      toast.success("Store updated.")
+      toast.success('Store updated.')
     } catch (error) {
-      toast.error("Something went wrong.")
+      toast.error('Something went wrong.')
     } finally {
       setLoading(false)
     }
@@ -64,10 +64,10 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
       setLoading(true)
       await axios.delete(`/api/stores/${params.storeId}`)
       router.refresh()
-      router.push("/")
-      toast.success("Store deleted.")
+      router.push('/')
+      toast.success('Store deleted.')
     } catch (error) {
-      toast.error("Make you removed all the products and categories first.")
+      toast.error('Make you removed all the products and categories first.')
     } finally {
       setOpen(false)
     }
@@ -120,7 +120,11 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initialData }) => {
               )}
             />
           </div>
-          <Button disabled={loading} className="ml-auto" type="submit">
+          <Button
+            disabled={loading}
+            className="ml-auto"
+            type="submit"
+          >
             Save
           </Button>
         </form>
