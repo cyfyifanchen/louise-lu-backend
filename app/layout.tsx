@@ -11,8 +11,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Dashboard',
-  description: 'E-Commerce Dashboard',
+  title: 'LL - LOUISE LU',
+  description: 'LL - Louise Lu Dashboard',
 }
 
 export default async function RootLayout({
