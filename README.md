@@ -1,6 +1,7 @@
 ## Ecommerce Dashboard
 
-Visit live at https://ecommerce-olive-eight.vercel.app
+Visit dashboard live at https://ecommerce-olive-eight.vercel.app
+Visit storefront live at https://store-front-vert.vercel.app
 
 ## Credits:
 
