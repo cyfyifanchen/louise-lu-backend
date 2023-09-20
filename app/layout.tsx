@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import { ClerkProvider } from '@clerk/nextjs'
 import { Inter } from 'next/font/google'
 
@@ -31,6 +32,7 @@ export default async function RootLayout({
             <ToastProvider />
             <ModalProvider />
             {children}
+            <Analytics />
           </ThemeProvider>
         </body>
       </html>
