@@ -23,9 +23,9 @@ export default async function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={inter.className}>
-          <ThemeProvider 
-            attribute="class" 
-            defaultTheme="system" 
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
             enableSystem
           >
             <ToastProvider />
