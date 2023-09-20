@@ -4,8 +4,7 @@ Visit live at https://ecommerce-olive-eight.vercel.app
 
 ## Credits:
 
-- Image credits: Upslash images
-- Font Credits: Mortal Kombat
+- Image credits: Upsplash
 
 ## Tech stack
 
@@ -44,7 +43,7 @@ bun run dev`
 
 ### Product
 
-![create](public/dashboard-product.png)
+![create](public/dashboard-product-add.png)
 
 ## Screenshots for storefront
 
@@ -54,7 +53,7 @@ bun run dev`
 
 ## Category
 
-![create](public/store-category.png)
+![create](public/store-category-home.png)
 
 ## Product
 
