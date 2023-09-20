@@ -7,5 +7,5 @@ export default function AuthLayout({
     <div className="flex items-center justify-center h-full w-full">
       {children}
     </div>
-  )
-}
+  );
+};

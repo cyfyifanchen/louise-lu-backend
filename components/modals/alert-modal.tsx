@@ -1,15 +1,15 @@
-"use client"
+"use client";
 
-import { setMaxIdleHTTPParsers } from "http"
-import { use, useEffect, useState } from "react"
-import { Modal } from "../ui/modal"
-import { Button } from "../ui/button"
+import { useEffect, useState } from "react";
+
+import { Modal } from "@/components/ui/modal";
+import { Button } from "@/components/ui/button";
 
 interface AlertModalProps {
-  isOpen: boolean
-  onClose: () => void
-  onConfirm: () => void
-  loading: boolean
+  isOpen: boolean;
+  onClose: () => void;
+  onConfirm: () => void;
+  loading: boolean;
 }
 
 export const AlertModal: React.FC<AlertModalProps> = ({
@@ -18,13 +18,15 @@ export const AlertModal: React.FC<AlertModalProps> = ({
   onConfirm,
   loading,
 }) => {
-  const [isMounted, setIsMounted] = useState(false)
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true)
-  }, [])
+    setIsMounted(true);
+  }, []);
 
-  if (!isMounted) return null
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <Modal
@@ -42,5 +44,5 @@ export const AlertModal: React.FC<AlertModalProps> = ({
         </Button>
       </div>
     </Modal>
-  )
-}
+  );
+};
