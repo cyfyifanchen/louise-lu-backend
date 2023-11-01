@@ -1,7 +1,14 @@
-"use client";
+'use client'
 
-import { ClipLoader } from "react-spinners";
+import { ClipLoader } from 'react-spinners'
 
 export const Loader = () => {
-  return <ClipLoader color="#3498db" size={50} />;
-};
+  return (
+    <div className="flex justify-center items-center h-screen">
+      <ClipLoader
+        color="#fffff"
+        size={40}
+      />
+    </div>
+  )
+}
